@@ -35,8 +35,9 @@ class ChartService
 
         $membresChart = new MembreChart();
         $membresChart->labels(['homme', 'femme']);
-        $membresChart->dataset('New Membre Register chartMembre', 'pie' /*'line'*/, $membres)->options([
-            'fill' => 'true',
+        $membresChart->dataset('Membres By Gender', 'pie' /*'line'*/, $membres)->options([
+            'backgroundColor'=>collect(['#7158e2','#3ae374', '#ff3838']),
+            'color'=>collect(['#7d5fff','#32ff7e', '#ff4d4d']),
             'borderColor' => '#51C1C0'
         ]);
         return $membresChart;
